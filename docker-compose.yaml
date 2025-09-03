@@ -16,7 +16,7 @@ services:
     ports:
       - "5540:5540"
     volumes:
-      - redisinsight_data:/var/lib/redisinsight/data
+      - redisinsight_data:/data
 
   postgres:
     image: postgres:latest
