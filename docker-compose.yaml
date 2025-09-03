@@ -10,6 +10,14 @@ services:
     tmpfs:
       - /data
 
+  redisinsight:
+    image: redis/redisinsight:latest
+    container_name: redisinsight_ui
+    ports:
+      - "8001:8001"
+    volumes:
+      - redisinsight_data:/var/lib/redisinsight/data
+
   postgres:
     image: postgres:latest
     container_name: postgres_server
@@ -46,3 +54,4 @@ services:
 volumes:
   postgres_data:
   pgadmin_data:
+  redisinsight_data:
