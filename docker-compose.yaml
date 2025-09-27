@@ -19,7 +19,7 @@ services:
       - redisinsight_data:/data
 
   postgres:
-    image: postgres:17
+    image: postgres:17.6
     container_name: postgres_server
     ports:
       - "5432:5432"
